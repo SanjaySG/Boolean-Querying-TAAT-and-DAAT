@@ -1,0 +1,111 @@
+private void docAtATimeQueryOR(String[] query) {
+		// TODO Auto-generated method stub
+		StringBuffer querySb= new StringBuffer();
+		querySb.append("FUNCTION: docAtATimeQueryOR ");
+		for(int z=0;z<query.length;z++){
+			querySb.append(query[z]+", ");
+		}
+		String queryStr=querySb.toString();
+		queryStr=queryStr.replaceAll(", +$", "");
+		System.out.println(queryStr);
+
+		// Creating an ArrayList which stores the postings list of all the query terms
+		LinkedList<LinkedList<Posting>> DAATList = new LinkedList<LinkedList<Posting>>();
+
+		for(int i=0;i<query.length;i++){
+			LinkedList<Posting> listSortedDAATTemp=Index.getIndex().get(query[i]).getPostingsListDAAT();
+			if(listSortedDAATTemp!=null){
+				DAATList.add(i, listSortedDAATTemp);
+			}
+		}
+
+		int countComparisons=0;
+		long startTime = System.nanoTime();
+
+		LinkedList<Posting> ORList= new LinkedList<Posting>();
+
+		//postingsListAttay contains the pointers to each of the postingslist
+		int pointerList[] = new int[DAATList.size()];
+
+		// Initializing each element of the postingListArray to the first posting of each of the postings list
+		for(int k=0;k<DAATList.size();k++){
+			pointerList[k]=0;
+		}
+
+		//The AND operation can have at most as many entries as in the postings list of the first term
+		//Iterator<Posting> firstIterator = DAATList.get(0).listIterator();
+		if(DAATList.size()==1){
+			ORList.addAll(DAATList.get(0));
+		}
+		else{
+			boolean endOfAllLists = false;
+			boolean endList[] = new boolean[DAATList.size()];
+			for(int j=0;j<DAATList.size();j++){
+				endList[j]=false;
+			}
+			int minPos=0;
+			while(!endOfAllLists){
+				int minDocId=-1;
+				for(int k=0;k<DAATList.size();k++){
+					if(endList[k]==false){
+					minDocId=DAATList.get(k).get(pointerList[k]).getDocID();
+					}
+				}
+				if(minDocId==-1)
+					break;
+
+				for(int j=0;j<DAATList.size();j++){
+					if(endList[j]==false){
+
+						if(DAATList.get(j).get(pointerList[j]).getDocID()<=minDocId){
+							minPos=j;
+							minDocId=DAATList.get(j).get(pointerList[j]).getDocID();
+							countComparisons++;
+						}
+					}
+				}
+
+				ORList.add(DAATList.get(minPos).get(pointerList[minPos]));
+
+				for(int j=0;j<DAATList.size();j++){
+					if(endList[j]==false){
+						if(DAATList.get(j).get(pointerList[j]).getDocID()==minDocId){
+							countComparisons++;
+							pointerList[j]++;
+							if(pointerList[j]==DAATList.get(j).size()){
+								endList[j]=true;
+							}
+						}
+					}
+				}
+
+				endOfAllLists=true;
+				for(int k=0;k<endList.length;k++){
+					if(endList[k]==false){
+						endOfAllLists=false;
+						break;
+					}
+				}
+
+
+			}
+		}
+		long endTime = System.nanoTime();
+		double elapsedTime = ((endTime-startTime)/1000000000.0);
+		System.out.println(ORList.size()+" documents are found");
+		System.out.println(countComparisons+" comparisons are made");
+		System.out.println(elapsedTime+" seconds are used");
+		System.out.println("nn comparisons are made with optimization");
+		StringBuffer sb = new StringBuffer();
+		sb.append("Result: ");
+
+		//Collections.sort(ANDList, new DocIDComparator());
+		for(int i=0;i<ORList.size();i++){
+			sb.append(ORList.get(i).getDocID()+", ");
+		}
+		String result=sb.toString();
+		result=result.replaceAll(", +$", "");
+		System.out.println(result);
+
+
+	}

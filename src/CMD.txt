@@ -1,0 +1,1 @@
+java CSE535Assignment E:\Workspace\CSE535Assignment\term.idx Output.log 14 E:\Workspace\CSE535Assignment\Query.txt

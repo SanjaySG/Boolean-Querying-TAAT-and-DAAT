@@ -1,0 +1,127 @@
+FUNCTION: getTopK 10
+Result: said, mln, dlr, from, it, vs, pct, ct, ha, year
+FUNCTION: getPostings you
+Ordered by doc IDs:9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+Ordered by TF:9933, 10432, 10742, 10748, 11259, 11441, 11454, 11694, 12503, 12854, 9638, 9661, 9803, 9816, 9861, 9939, 10140, 10518, 10773, 10909, 10910, 11180, 11293, 11542, 12118, 12203, 12306, 12325, 12452, 12554
+FUNCTION: termAtATimeQueryAnd you
+30 documents are found
+0 comparisons are made
+7.7E-7 seconds are used
+nn comparisons are made with optimization
+Result: 9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: termAtATimeQueryOr you
+30 documents are found
+30 comparisons are made
+3.3492E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: docAtATimeQueryAnd you
+30 documents are found
+0 comparisons are made
+1.03939E-4 seconds are used
+nn comparisons are made with optimization
+Result: 9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: docAtATimeQueryOR you
+30 documents are found
+0 comparisons are made
+6.929E-6 seconds are used
+nn comparisons are made with optimization
+Result: 9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: getPostings youare
+Ordered by doc IDs:9933, 10748
+Ordered by TF:9933, 10748
+FUNCTION: getPostings you
+Ordered by doc IDs:9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+Ordered by TF:9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: termAtATimeQueryAnd youare, you
+2 documents are found
+18 comparisons are made
+1.7323E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9933, 10748
+FUNCTION: termAtATimeQueryOr youare, you
+30 documents are found
+439 comparisons are made
+3.38382E-4 seconds are used
+nn comparisons are made with optimization
+Result: 9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: docAtATimeQueryAnd youare, you
+2 documents are found
+13 comparisons are made
+4.5426E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9933, 10748
+FUNCTION: docAtATimeQueryOR youare, you
+30 documents are found
+64 comparisons are made
+8.3537E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: getPostings you
+Ordered by doc IDs:9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+Ordered by TF:9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: getPostings youare
+Ordered by doc IDs:9933, 10748
+Ordered by TF:9933, 10748
+FUNCTION: termAtATimeQueryAnd you, youare
+2 documents are found
+59 comparisons are made
+2.6948E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9933, 10748
+FUNCTION: termAtATimeQueryOr you, youare
+30 documents are found
+48 comparisons are made
+1.6168E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: docAtATimeQueryAnd you, youare
+2 documents are found
+15 comparisons are made
+1.7708E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9933, 10748
+FUNCTION: docAtATimeQueryOR you, youare
+30 documents are found
+64 comparisons are made
+8.0072E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: getPostings you
+Ordered by doc IDs:9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+Ordered by TF:9638, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: getPostings youare
+Ordered by doc IDs:9933, 10748
+Ordered by TF:9933, 10748
+FUNCTION: getPostings your
+Ordered by doc IDs:9645, 9933, 10432, 11293, 11694
+Ordered by TF:11694, 11293, 9645, 9933, 10432
+FUNCTION: termAtATimeQueryAnd you, youare, your
+1 documents are found
+68 comparisons are made
+3.0797E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9933
+FUNCTION: termAtATimeQueryOr you, youare, your
+31 documents are found
+133 comparisons are made
+4.889E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9638, 9645, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: docAtATimeQueryAnd you, youare, your
+1 documents are found
+26 comparisons are made
+2.3867E-5 seconds are used
+nn comparisons are made with optimization
+Result: 9933
+FUNCTION: docAtATimeQueryOR you, youare, your
+31 documents are found
+74 comparisons are made
+1.0702E-4 seconds are used
+nn comparisons are made with optimization
+Result: 9638, 9645, 9661, 9803, 9816, 9861, 9933, 9939, 10140, 10432, 10518, 10742, 10748, 10773, 10909, 10910, 11180, 11259, 11293, 11441, 11454, 11542, 11694, 12118, 12203, 12306, 12325, 12452, 12503, 12554, 12854
+FUNCTION: getPostings yendenominated
+Ordered by doc IDs:9816
+Ordered by TF:9816
+FUNCTION: getPostings we
+Ordered by doc IDs:9603, 9610, 9613, 9614, 9626, 9638, 9661, 9674, 9701, 9706, 9721, 9803, 9816, 9835, 9841, 9847, 9861, 9866, 9871, 9908, 9936, 9939, 9997, 10034, 10083, 10140, 10171, 10193, 10319, 10357, 10400, 10402, 10410, 10444, 10445, 10487, 10503, 10518, 10534, 10565, 10633, 10727, 10729, 10748, 10778, 10794, 10817, 10823, 10854, 10914, 10919, 10960, 10973, 11002, 11026, 11037, 11038, 11048, 11172, 11180, 11188, 11233, 11236, 11237, 11244, 11245, 11250, 11272, 11286, 11296, 11322, 11330, 11355, 11369, 11383, 11424, 11439, 11454, 11513, 11542, 11547, 11590, 11613, 11625, 11685, 11692, 11705, 11731, 11743, 11768, 11788, 11800, 11820, 11827, 11828, 11837, 11841, 11853, 11865, 11896, 11898, 11916, 11918, 12019, 12037, 12052, 12066, 12118, 12119, 12120, 12122, 12138, 12140, 12143, 12173, 12194, 12195, 12203, 12213, 12247, 12249, 12295, 12306, 12321, 12325, 12387, 12442, 12452, 12487, 12503, 12554, 12577, 12634, 12636, 1264
